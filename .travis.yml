@@ -12,10 +12,10 @@ script:
 
 
 after_success:
-  - docker build -t oscarzzz/multi-client -f ./client
-  - docker build -t oscarzzz/multi-nginx -f ./nginx
-  - docker build -t oscarzzz/multi-server -f ./server
-  - docker build -t oscarzzz/multi-worker -f ./worker
+  - docker build -t oscarzzz/multi-client ./client
+  - docker build -t oscarzzz/multi-nginx ./nginx
+  - docker build -t oscarzzz/multi-server ./server
+  - docker build -t oscarzzz/multi-worker ./worker
 
   # log in to docker cli first in order to push to docker hub
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID"  ---password-stdin
