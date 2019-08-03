@@ -35,12 +35,8 @@ class Fib extends Component {
   };
 
   renderSeenIndexes() {
-    if (this.state.seenIndexes.length > 0 && Array.isArray(this.state.seenIndexes)) {
-      console.log('this.state.seenIndexes', this.state.seenIndexes);
-      return this.state.seenIndexes.map(({ number }) => number).join(', ');
-    }
-    return null;
- }
+    return this.state.seenIndexes.map(({ number }) => number).join(', ');
+  }
 
   renderValues() {
     const entries = [];
